@@ -1,0 +1,19 @@
+{
+  "name": "github-delivery-metrics",
+  "version": "0.0.0",
+  "description": "A collection of tools to parse GitHub repository information into useful delivery metrics",
+  "main": "src/main.ts",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "author": "Jon Lauridsen <mail@jonlauridsen.com>",
+  "license": "ISC",
+  "dependencies": {
+    "github-api": "^3.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "12.12.6",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  }
+}
