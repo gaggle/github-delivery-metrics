@@ -4,11 +4,12 @@
   "description": "A collection of tools to parse GitHub repository information into useful delivery metrics",
   "main": "src/main.ts",
   "scripts": {
-    "start": "ts-node index.ts"
+    "start": "ts-node src/main.ts"
   },
   "author": "Jon Lauridsen <mail@jonlauridsen.com>",
   "license": "ISC",
   "dependencies": {
+    "commander": "^6.2.0",
     "github-api": "^3.3.0",
     "luxon": "^1.25.0"
   },
