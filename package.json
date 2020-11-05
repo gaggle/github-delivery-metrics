@@ -9,9 +9,11 @@
   "author": "Jon Lauridsen <mail@jonlauridsen.com>",
   "license": "ISC",
   "dependencies": {
-    "github-api": "^3.3.0"
+    "github-api": "^3.3.0",
+    "luxon": "^1.25.0"
   },
   "devDependencies": {
+    "@types/luxon": "^1.25.0",
     "@types/node": "12.12.6",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.3"
