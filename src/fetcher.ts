@@ -1,4 +1,4 @@
-import { GithubRepoWrapper } from "./githubWrapper"
+import { GithubRepoWrapper } from "./github-wrapper"
 import { CommitModel, ReleaseModel } from "./types/fetcher"
 import { GithubRelease } from "./types/github"
 

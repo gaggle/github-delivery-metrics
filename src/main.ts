@@ -1,17 +1,18 @@
-import { program } from "commander"
-import { parseMainCli, CliArgs } from "./cliParse"
-import { csv } from "./csv"
-import { Fetcher } from "./fetcher"
-import { GithubRepoWrapper } from "./githubWrapper"
+import { program } from "commander";
+import { parseMainCli, CliArgs } from "./cli-parse";
+import { csv } from "./csv";
+import { Fetcher } from "./fetcher";
+import { GithubRepoWrapper } from "./github-wrapper";
 
-async function main (args: CliArgs) {
-  const fetcher = new Fetcher(new GithubRepoWrapper(args.token, args.owner, args.repo))
-  await csv(fetcher)
+async function main(args: CliArgs) {
+  const [owner, repo] = args.path.split("/");
+  const fetcher = new Fetcher(new GithubRepoWrapper(args.token, owner, repo));
+  await csv(fetcher);
 }
 
-const parsedArgs = parseMainCli(program, process.argv)
+const parsedArgs = parseMainCli(program, process.argv);
 main(parsedArgs)
   .catch((err) => {
-    console.error(err)
-    process.exit(1)
-  })
+    console.error(err);
+    process.exit(1);
+  });
