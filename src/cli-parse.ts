@@ -20,6 +20,7 @@ export type CliArgs = {
  */
 export function parseMainCli(program: Command, argv: string[]): CliArgs {
   program.version(packageInfo.version)
+    .allowExcessArguments(false)
     .name("github-delivery-metrics")
     .description("This tool calculates various metrics that can be useful for discussions about delivery performance.")
     .argument("<token>", "GitHub Personal Access Token")
